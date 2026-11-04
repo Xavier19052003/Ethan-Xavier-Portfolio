@@ -1,0 +1,192 @@
+[
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/registration.webp",
+    "title": "Registration",
+    "description": "Enter a name, email and university to begin the UI-only registration flow.",
+    "alt": "EduSwap: Registration. Enter a name, email and university to begin the UI-only registration flow.",
+    "width": 186,
+    "height": 415,
+    "bytes": 76236
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/validation.webp",
+    "title": "Form validation",
+    "description": "Required inputs are checked before registration proceeds.",
+    "alt": "EduSwap: Form validation. Required inputs are checked before registration proceeds.",
+    "width": 186,
+    "height": 415,
+    "bytes": 76386
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/marketplace.webp",
+    "title": "Marketplace",
+    "description": "Browse textbook listings with a price, seller and university.",
+    "alt": "EduSwap: Marketplace. Browse textbook listings with a price, seller and university.",
+    "width": 186,
+    "height": 415,
+    "bytes": 71896
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/search.webp",
+    "title": "Textbook search",
+    "description": "The demonstrated search filters the marketplace by textbook title.",
+    "alt": "EduSwap: Textbook search. The demonstrated search filters the marketplace by textbook title.",
+    "width": 186,
+    "height": 415,
+    "bytes": 72080
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/book-details.webp",
+    "title": "Book details",
+    "description": "Inspect price, condition, seller, university and available book images.",
+    "alt": "EduSwap: Book details. Inspect price, condition, seller, university and available book images.",
+    "width": 186,
+    "height": 415,
+    "bytes": 47394
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/sell.webp",
+    "title": "Sell textbook",
+    "description": "Enter listing details and select a book image from the device.",
+    "alt": "EduSwap: Sell textbook. Enter listing details and select a book image from the device.",
+    "width": 186,
+    "height": 415,
+    "bytes": 72050
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/chat-list.webp",
+    "title": "Chat list",
+    "description": "The inquiry entry point groups the prototype’s textbook conversations.",
+    "alt": "EduSwap: Chat list. The inquiry entry point groups the prototype’s textbook conversations.",
+    "width": 135,
+    "height": 301,
+    "bytes": 39684
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/inquiry.webp",
+    "title": "Buyer/seller inquiry",
+    "description": "Simple local messages support textbook questions, with validation and self-message prevention.",
+    "alt": "EduSwap: Buyer/seller inquiry. Simple local messages support textbook questions, with validation and self-message prevention.",
+    "width": 135,
+    "height": 301,
+    "bytes": 38006
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/profile.webp",
+    "title": "Student profile",
+    "description": "View profile information and manage your own listings, including deletion.",
+    "alt": "EduSwap: Student profile. View profile information and manage your own listings, including deletion.",
+    "width": 135,
+    "height": 301,
+    "bytes": 42816
+  },
+  {
+    "project": "eduswap",
+    "src": "projects/eduswap/feedback.webp",
+    "title": "User feedback",
+    "description": "Toast messages give immediate feedback after actions, such as logging out.",
+    "alt": "EduSwap: User feedback. Toast messages give immediate feedback after actions, such as logging out.",
+    "width": 135,
+    "height": 301,
+    "bytes": 44296
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/catalog.webp",
+    "title": "Book catalogue",
+    "description": "Browse the local catalogue with title, author, category and availability badges.",
+    "alt": "Kitabu: Book catalogue. Browse the local catalogue with title, author, category and availability badges.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 331776
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/search.webp",
+    "title": "Title and author search",
+    "description": "Filter the catalogue to locate matching titles or authors.",
+    "alt": "Kitabu: Title and author search. Filter the catalogue to locate matching titles or authors.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 393800
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/reserve.webp",
+    "title": "Reserve a book",
+    "description": "Choose a 7, 14 or 21-day rental period for an available book.",
+    "alt": "Kitabu: Reserve a book. Choose a 7, 14 or 21-day rental period for an available book.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 201088
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/pending.webp",
+    "title": "Pending reservation",
+    "description": "Review a PENDING booking and its deadline; confirm pickup or cancel it.",
+    "alt": "Kitabu: Pending reservation. Review a PENDING booking and its deadline; confirm pickup or cancel it.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 338742
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/active.webp",
+    "title": "Pickup confirmed",
+    "description": "After pickup confirmation, the booking is ACTIVE and offers renewal and return actions.",
+    "alt": "Kitabu: Pickup confirmed. After pickup confirmation, the booking is ACTIVE and offers renewal and return actions.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 334548
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/renew.webp",
+    "title": "Renew a rental",
+    "description": "Extend an active rental by selecting an additional rental period.",
+    "alt": "Kitabu: Renew a rental. Extend an active rental by selecting an additional rental period.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 194868
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/returned.webp",
+    "title": "Book returned",
+    "description": "Returning a book marks the booking RETURNED and restores catalogue availability.",
+    "alt": "Kitabu: Book returned. Returning a book marks the booking RETURNED and restores catalogue availability.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 331776
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/cancel.webp",
+    "title": "Cancel a pending reservation",
+    "description": "Pending bookings offer cancellation, which removes the booking and releases the book.",
+    "alt": "Kitabu: Cancel a pending reservation. Pending bookings offer cancellation, which removes the booking and releases the book.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 338028
+  },
+  {
+    "project": "kitabu",
+    "src": "projects/kitabu/empty.webp",
+    "title": "Empty reservations",
+    "description": "An honest empty state appears when there are no current reservations.",
+    "alt": "Kitabu: Empty reservations. An honest empty state appears when there are no current reservations.",
+    "width": 720,
+    "height": 1523,
+    "bytes": 375962
+  }
+]

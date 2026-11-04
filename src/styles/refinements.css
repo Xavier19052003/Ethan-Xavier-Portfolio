@@ -74,3 +74,21 @@
   [data-magnetic] { translate: none !important; }
   .phone-screen { animation: none; }
 }
+
+/* Genuine app interfaces sit inside the existing artwork dimensions. */
+.app-project-artwork { background: linear-gradient(140deg, #eee5f6, #d9c9e6); }
+.app-project-artwork.artwork-edu { background: linear-gradient(140deg, #e5eebc, #d8e2c8); }
+.app-cover-screens { position: absolute; inset: 0; }
+.app-cover-phone { position: absolute; top: 8%; height: 84%; width: 28%; filter: drop-shadow(0 8px 7px #17171c25); }
+.app-cover-phone img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.app-cover-phone-0 { left: 14%; transform: rotate(-9deg) translateY(5%); }
+.app-cover-phone-1 { left: 36%; z-index: 2; }
+.app-cover-phone-2 { left: 58%; transform: rotate(9deg) translateY(5%); }
+.phone-frame.includes-device { padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.phone-frame.includes-device .phone-screen { border-radius: 0; background: transparent; }
+.phone-screen { display: block; position: relative; }
+.screen-loading { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 13px; }
+.current-screen-copy > p { font-size: 16px; color: var(--muted); line-height: 1.8; }
+.case-study-section > p { color: var(--muted); line-height: 1.85; }
+.app-showcase-copy > .text-link { display: inline-flex; margin-top: 20px; min-height: 44px; align-items: center; }
+@media (max-width: 760px) { .app-showcase { grid-template-columns: 1fr; } }

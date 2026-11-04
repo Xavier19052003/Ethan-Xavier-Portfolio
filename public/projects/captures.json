@@ -1,0 +1,146 @@
+[
+  {
+    "path": "public/projects/blaqpearl/desktop.webp",
+    "source": "https://blaqpearl.co.za/",
+    "captured": "2026-11-04",
+    "width": 1430,
+    "height": 894,
+    "bytes": 64270
+  },
+  {
+    "path": "public/projects/blaqpearl/thumbnail.webp",
+    "source": "https://blaqpearl.co.za/",
+    "captured": "2026-11-04",
+    "width": 800,
+    "height": 500,
+    "bytes": 29738
+  },
+  {
+    "path": "public/projects/blaqpearl/mobile.webp",
+    "source": "https://blaqpearl.co.za/",
+    "captured": "2026-11-04",
+    "width": 380,
+    "height": 822,
+    "bytes": 25142
+  },
+  {
+    "path": "public/projects/blaqpearl/full-page.webp",
+    "source": "https://blaqpearl.co.za/",
+    "captured": "2026-11-04",
+    "width": 1200,
+    "height": 1425,
+    "bytes": 108124
+  },
+  {
+    "path": "public/projects/blaqpearl/catalog.webp",
+    "source": "https://blaqpearl.co.za/collections/all",
+    "captured": "2026-11-04",
+    "width": 380,
+    "height": 822,
+    "bytes": 18252
+  },
+  {
+    "path": "public/projects/frs-vip/desktop.webp",
+    "source": "https://xavier19052003.github.io/FRS-VIP/",
+    "captured": "2026-11-04",
+    "width": 1440,
+    "height": 900,
+    "bytes": 74066
+  },
+  {
+    "path": "public/projects/frs-vip/thumbnail.webp",
+    "source": "https://xavier19052003.github.io/FRS-VIP/",
+    "captured": "2026-11-04",
+    "width": 800,
+    "height": 500,
+    "bytes": 34660
+  },
+  {
+    "path": "public/projects/frs-vip/mobile.webp",
+    "source": "https://xavier19052003.github.io/FRS-VIP/",
+    "captured": "2026-11-04",
+    "width": 390,
+    "height": 843,
+    "bytes": 28744
+  },
+  {
+    "path": "public/projects/frs-vip/full-page.webp",
+    "source": "https://xavier19052003.github.io/FRS-VIP/",
+    "captured": "2026-11-04",
+    "width": 1200,
+    "height": 3413,
+    "bytes": 229780
+  },
+  {
+    "path": "public/projects/frs-vip/services.webp",
+    "source": "https://xavier19052003.github.io/FRS-VIP/services.html",
+    "captured": "2026-11-04",
+    "width": 1440,
+    "height": 900,
+    "bytes": 60212
+  },
+  {
+    "path": "public/projects/natures-nurture/desktop.webp",
+    "source": "https://xavier19052003.github.io/Nature-Nurture/",
+    "captured": "2026-11-04",
+    "width": 1425,
+    "height": 891,
+    "bytes": 97954
+  },
+  {
+    "path": "public/projects/natures-nurture/thumbnail.webp",
+    "source": "https://xavier19052003.github.io/Nature-Nurture/",
+    "captured": "2026-11-04",
+    "width": 800,
+    "height": 500,
+    "bytes": 46188
+  },
+  {
+    "path": "public/projects/natures-nurture/mobile.webp",
+    "source": "https://xavier19052003.github.io/Nature-Nurture/",
+    "captured": "2026-11-04",
+    "width": 375,
+    "height": 811,
+    "bytes": 42204
+  },
+  {
+    "path": "public/projects/natures-nurture/full-page.webp",
+    "source": "https://xavier19052003.github.io/Nature-Nurture/",
+    "captured": "2026-11-04",
+    "width": 1200,
+    "height": 4658,
+    "bytes": 326626
+  },
+  {
+    "path": "public/projects/autism-allyship/thumbnail.webp",
+    "source": "https://autism-allyship.pages.dev/",
+    "captured": "2026-11-04",
+    "width": 800,
+    "height": 500,
+    "bytes": 27410
+  },
+  {
+    "path": "public/projects/autism-allyship/desktop.webp",
+    "source": "https://autism-allyship.pages.dev/",
+    "captured": "2026-11-04",
+    "width": 1425,
+    "height": 891,
+    "bytes": 62462
+  },
+  {
+    "path": "public/projects/autism-allyship/mobile.webp",
+    "source": "https://autism-allyship.pages.dev/",
+    "captured": "2026-11-04",
+    "width": 375,
+    "height": 811,
+    "bytes": 27428
+  },
+  {
+    "path": "public/projects/autism-allyship/full-page.webp",
+    "source": "https://autism-allyship.pages.dev/",
+    "captured": "2026-11-04",
+    "width": 1200,
+    "height": 4247,
+    "bytes": 254898
+  }
+]

@@ -1,0 +1,23 @@
+/* Keep the existing artwork frame and card layout; only its contents change. */
+.website-screenshot { --preview-distance: 0px; --preview-duration: 3s; background: var(--paper); }
+.screenshot-picture { display: block; width: 100%; height: 100%; }
+.website-screenshot .screenshot-thumbnail { width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; transition: opacity .25s, transform .55s; }
+.website-screenshot .screenshot-thumbnail.is-loaded { opacity: 1; }
+.website-screenshot > .screenshot-full { position: absolute; inset: 0 auto auto 0; display: block; width: 100%; height: auto; max-width: none; opacity: 0; transform: translateY(0); transition: transform .7s ease, opacity .2s; pointer-events: none; }
+.screenshot-hint { position: absolute; bottom: 16px; left: 16px; padding: 8px 12px; border-radius: 3px; background: #19191fed; color: #fff; font-size: 13px; line-height: 1.4; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.website-gallery { align-items: start; }
+.website-gallery figure { min-width: 0; }
+.website-gallery a { display: block; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+.website-gallery img { display: block; width: 100%; height: 190px; object-fit: contain; object-position: top; background: var(--paper); }
+.website-gallery figcaption, .gallery-instruction { font-size: 14px; line-height: 1.6; color: var(--muted); }
+.website-gallery figcaption { margin-top: 8px; }
+@media (min-width: 761px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover .website-screenshot .screenshot-thumbnail { transform: scale(1.035); }
+  .project-card:hover .interactive-screenshot.preview-ready[data-scrollable="true"] > .screenshot-full { opacity: 1; transform: translateY(calc(-1 * var(--preview-distance))); transition: transform var(--preview-duration) ease-in-out, opacity .25s; }
+  .project-card:hover .screenshot-hint, .project-cover-button:focus-visible .screenshot-hint { opacity: 1; }
+}
+@media (max-width: 760px), (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .website-screenshot .screenshot-thumbnail { transform: none !important; }
+  .website-screenshot > .screenshot-full { display: none; }
+}
+@media (max-width: 760px) { .website-gallery img { height: 260px; } }

@@ -12,7 +12,7 @@
 
 ## Missing assets and destinations
 
-No actual Android screenshots or shareable APK files were present. Add approved EduSwap screenshots for registration, home, textbook search, book details, selling listings, inbox and in-app messaging under `public/projects/eduswap/`, then populate the `gallery` array in `src/data/projects.ts` with public-relative `src` and descriptive `alt` values. Use `gallery` the same way for CampusConnect. The phone display uses `object-fit: contain` and does not stretch images. APK links have not been invented.
+EduSwap and Kitabu now use authentic screenshots imported from Pictures and Desktop. Their typed galleries live in src/data/appScreens.ts. The reusable phone viewer includes screen-specific descriptions, arrows, keyboard controls and swipes; images use object-fit: contain. No APK download has been invented.
 
 Nature’s Nurture and Active Autism have no verified live URL in the portfolio sources. Their live actions remain absent. Existing FRS VIP and BlaqPearl URLs were checked and returned HTTP 200. Project-specific technologies and outcomes remain factual.
 

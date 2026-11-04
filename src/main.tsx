@@ -11,5 +11,6 @@ import App from './App'
 import './styles/global.css'
 import './styles/interactions.css'
 import './styles/refinements.css'
+import './styles/screenshots.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>)

@@ -5,7 +5,7 @@ import { ProjectArtwork } from './ProjectArtwork'
 export function ProjectCard({ project, index, onOpen }: { project: Project; index: number; onOpen: (project: Project) => void }) {
   return <article data-flip-id={project.id} className={`project-card ${project.status === 'academic' && !project.featured ? 'academic-card' : ''}`}>
     <button className="project-cover-button" onClick={() => onOpen(project)} aria-label={`Explore ${project.title}`}>
-      <ProjectArtwork project={project}/><span className="project-open-icon"><Plus size={23}/></span>
+      <ProjectArtwork project={project} interactive/><span className="project-open-icon"><Plus size={23}/></span>
     </button>
     <div className="project-info">
       <p className="project-category"><span>{String(index + 1).padStart(2, '0')}</span>{project.category}</p>
@@ -15,8 +15,8 @@ export function ProjectCard({ project, index, onOpen }: { project: Project; inde
       {project.note && <p className="project-note">{project.note}</p>}
       <div className="project-actions">
         <button className="text-link" onClick={() => onOpen(project)}>{project.filters.includes('Application Development') ? 'Explore app' : 'View case study'} <Plus size={15} aria-hidden="true"/></button>
-        {project.liveUrl && project.liveLinkEnabled ? <a className="text-link" href={project.liveUrl} target="_blank" rel="noopener noreferrer">View website <ArrowUpRight size={16} aria-hidden="true"/><span className="sr-only"> (opens in a new tab)</span></a> : project.status !== 'academic' && <span className="unavailable-note">Live link coming soon</span>}
-        {project.githubUrl && <a className="text-link" href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={16}/><span className="sr-only"> (opens in a new tab)</span></a>}
+        {project.liveUrl && project.liveLinkEnabled ? <a className="text-link" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit website <ArrowUpRight size={16} aria-hidden="true"/><span className="sr-only"> (opens in a new tab)</span></a> : project.status !== 'academic' && <span className="unavailable-note">Live link coming soon</span>}
+        {project.githubUrl && <a className="text-link" href={project.githubUrl} target="_blank" rel="noopener noreferrer">View source code <ArrowUpRight size={16}/><span className="sr-only"> (opens in a new tab)</span></a>}
       </div>
     </div>
   </article>

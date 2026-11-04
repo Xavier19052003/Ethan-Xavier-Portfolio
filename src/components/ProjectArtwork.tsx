@@ -1,8 +1,12 @@
 import { ArrowUpRight, BookOpen, Command, Leaf, ShieldCheck, Smartphone } from 'lucide-react'
 import type { Project } from '../data/projects'
 import { assetUrl } from '../utils/assets'
+import { WebsiteScreenshot } from './WebsiteScreenshot'
+import { AppProjectArtwork } from './AppProjectArtwork'
 
-export function ProjectArtwork({ project }: { project: Project }) {
+export function ProjectArtwork({ project, interactive = false }: { project: Project; interactive?: boolean }) {
+  if (project.image && project.filters.includes('Application Development')) return <AppProjectArtwork project={project}/>
+  if (project.fullPageImage && project.image) return <WebsiteScreenshot key={project.id} project={project} interactive={interactive}/>
   if (project.image) return <div className="project-artwork has-image"><img src={assetUrl(project.image)} alt={project.imageAlt || `${project.title} project screenshot`} loading="lazy" width="1200" height="800" /></div>
   return <div className={`project-artwork artwork-${project.theme}`}>
     <span className="cover-label">PROJECT COVER / SCREENSHOT TO COME</span>

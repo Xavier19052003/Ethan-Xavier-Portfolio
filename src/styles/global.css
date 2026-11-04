@@ -146,7 +146,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .project-artwork > img { width: 100%; height: 100%; object-fit: cover; }
 .cover-label { position: absolute; z-index: 2; left: 20px; top: 18px; font-size: 12px; line-height: 1.5; letter-spacing: 1.5px; opacity: .8; }
 .cover-composition { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
-.project-cover-button:hover .cover-composition, .project-cover-button:hover img { transform: scale(1.035); }
+.project-cover-button:hover .cover-composition, .project-cover-button:hover img:not(.screenshot-full) { transform: scale(1.035); }
 .project-artwork img { transition: transform .55s; }
 .project-open-icon { position: absolute; right: 17px; bottom: 17px; width: 41px; height: 41px; display: grid; place-items: center; border-radius: 50%; background: var(--paper); color: var(--ink); transition: background .2s, transform .3s; }
 .project-cover-button:hover .project-open-icon { background: var(--yellow); transform: rotate(90deg); }
