@@ -67,9 +67,9 @@ GSAP uses scoped cleanup and respects `prefers-reduced-motion`. The site include
 
 ## Production deployment
 
-The GitHub repository already has an older static Pages site. The upgrade is pushed on `refine-interactive-portfolio`. Follow `REFINEMENTS.md` before changing Pages publishing or merging this Vite source into the branch-served root.
+The upgraded portfolio is on `main`. `.github/workflows/pages.yml` checks and builds the app, then publishes `dist/` to GitHub Pages on every push to `main`. Pages uses GitHub Actions publishing rather than serving the raw source folder. Live URL: https://xavier19052003.github.io/Ethan-Xavier-Portfolio/
 
-This is a static site; no server, credentials, database, or API keys are required. It has not been deployed by this project setup.
+This is a static site; no server, credentials, database, or API keys are required. The production build is published through the GitHub Pages workflow.
 
 1. Run `npm ci`, `npm run lint`, `npm test`, and `npm run build`.
 2. Deploy the **contents of `dist/`** to a static hosting provider (for example Cloudflare Pages, Netlify, Vercel, or GitHub Pages). For build-based hosts use `npm run build` and output directory `dist`.

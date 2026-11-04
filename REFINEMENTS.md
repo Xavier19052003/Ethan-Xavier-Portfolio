@@ -18,8 +18,8 @@ Nature’s Nurture and Active Autism have no verified live URL in the portfolio 
 
 ## GitHub and deployment
 
-The supplied remote is `https://github.com/Xavier19052003/Ethan-Xavier-Portfolio.git`. Its existing `main` commit contains an older static portfolio and original image files, which are preserved. This React/Vite upgrade is prepared on `refine-interactive-portfolio` so it does not replace an existing branch-served GitHub Pages site with unbuilt source.
+The upgraded React/Vite site is on `main` in `https://github.com/Xavier19052003/Ethan-Xavier-Portfolio.git`. The original static version remains recoverable in Git history. `.github/workflows/pages.yml` runs lint, tests and the production build, then publishes only `dist/` with GitHub Pages Actions. Pushes to `main` deploy automatically after successful checks.
 
-For publishing the upgrade, configure GitHub Pages to receive a build of `dist/` through an approved deployment workflow. Build with `npm ci` and `npm run build`; deploy the contents of `dist/`. Do not merge the new source `index.html` into a branch-served Pages root without updating publishing, because browsers cannot execute raw TypeScript/TSX. No deployment is performed as part of this refinement.
+The workflow uses `/Ethan-Xavier-Portfolio/` as Vite’s deployment base, including CV and image paths. The default local Vite configuration remains relative for development and portable builds.
 
-Run locally with `npm run dev`. Check with `npm run lint`, `npm test`, `npm run build`. No new package dependency was introduced by this refinement. The existing CV and its filename are preserved.
+Run locally with `npm run dev`. Check with `npm run lint`, `npm test`, `npm run build`. No extra runtime dependency is needed. Live URL: https://xavier19052003.github.io/Ethan-Xavier-Portfolio/
