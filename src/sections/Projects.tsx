@@ -8,6 +8,8 @@ import { ProjectCard } from '../components/ProjectCard'
 import { ProjectDialog } from '../components/ProjectDialog'
 import { getVisibleProjects, projects, projectFilters, type Project, type ProjectFilter } from '../data/projects'
 import { profile } from '../data/profile'
+import { useProjectDepth } from '../hooks/useStoryMotion'
+import { useMobileProjectPreviews } from '../hooks/useMobileProjectPreviews'
 
 gsap.registerPlugin(Flip)
 const projectFromHash = () => projects.find(project => project.verified && `#project/${project.id}` === window.location.hash) || null
@@ -19,11 +21,14 @@ export function Projects() {
   const previousLayout = useRef<ReturnType<typeof Flip.getState> | null>(null)
   const previousHeight = useRef(0)
   const filterAnimation = useRef<gsap.core.Timeline | null>(null)
+  const closePending = useRef(false)
+  useMobileProjectPreviews(content, Boolean(selected), filter)
+  useProjectDepth(content, filter)
   const visible = getVisibleProjects(filter)
   const commercial = visible.filter(project => project.featured)
   const academic = visible.filter(project => !project.featured)
   useEffect(() => {
-    const sync = () => setSelected(projectFromHash())
+    const sync = () => { const next = projectFromHash(); if (next) closePending.current = false; setSelected(next) }
     window.addEventListener('popstate', sync)
     window.addEventListener('hashchange', sync)
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -32,15 +37,17 @@ export function Projects() {
     return () => { window.removeEventListener('popstate', sync); window.removeEventListener('hashchange', sync); preference.removeEventListener('change', finish) }
   }, [])
   function openProject(project: Project) {
+    closePending.current = false
     history.pushState({ portfolioCaseStudy: true }, '', `#project/${project.id}`)
     setSelected(project)
   }
   function closeProject() {
+    if (closePending.current) return
+    closePending.current = true
     if (history.state?.portfolioCaseStudy) history.back()
     else {
       history.replaceState(null, '', '#projects')
       setSelected(null)
-      document.getElementById('projects')?.scrollIntoView({ behavior: 'instant' })
     }
   }
   function changeFilter(next: ProjectFilter) {

@@ -5,7 +5,7 @@ import { ProjectArtwork } from './ProjectArtwork'
 export function ProjectCard({ project, index, onOpen }: { project: Project; index: number; onOpen: (project: Project) => void }) {
   return <article data-flip-id={project.id} className={`project-card ${project.status === 'academic' && !project.featured ? 'academic-card' : ''}`}>
     <button className="project-cover-button" onClick={() => onOpen(project)} aria-label={`Explore ${project.title}`}>
-      <ProjectArtwork project={project} interactive/><span className="project-open-icon"><Plus size={23}/></span>
+      <div className="project-depth"><ProjectArtwork project={project} interactive/></div><span className="project-open-icon"><Plus size={23}/></span>
     </button>
     <div className="project-info">
       <p className="project-category"><span>{String(index + 1).padStart(2, '0')}</span>{project.category}</p>

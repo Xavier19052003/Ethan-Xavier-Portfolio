@@ -2,84 +2,68 @@ import type { ProjectScreen } from './projects'
 
 export const eduswapScreens: ProjectScreen[] = [
   {
-    "src": "projects/eduswap/registration.webp",
+    "src": "projects/eduswap/framed-registration.webp",
     "title": "Registration",
-    "description": "Enter a name, email and university to begin the UI-only registration flow.",
-    "alt": "EduSwap: Registration. Enter a name, email and university to begin the UI-only registration flow.",
-    "width": 186,
-    "height": 415
+    "description": "Students enter their name, email address and university. Registration is a UI-only academic flow.",
+    "alt": "EduSwap: Registration. Students enter their name, email address and university. Registration is a UI-only academic flow.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/validation.webp",
-    "title": "Form validation",
-    "description": "Required inputs are checked before registration proceeds.",
-    "alt": "EduSwap: Form validation. Required inputs are checked before registration proceeds.",
-    "width": 186,
-    "height": 415
+    "src": "projects/eduswap/framed-validation.webp",
+    "title": "Input validation",
+    "description": "Required-field validation displays feedback before the student can proceed.",
+    "alt": "EduSwap: Input validation. Required-field validation displays feedback before the student can proceed.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/marketplace.webp",
+    "src": "projects/eduswap/framed-marketplace.webp",
     "title": "Marketplace",
-    "description": "Browse textbook listings with a price, seller and university.",
-    "alt": "EduSwap: Marketplace. Browse textbook listings with a price, seller and university.",
-    "width": 186,
-    "height": 415
+    "description": "Browse second-hand textbook listings with prices, sellers and universities.",
+    "alt": "EduSwap: Marketplace. Browse second-hand textbook listings with prices, sellers and universities.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/search.webp",
-    "title": "Textbook search",
-    "description": "The demonstrated search filters the marketplace by textbook title.",
-    "alt": "EduSwap: Textbook search. The demonstrated search filters the marketplace by textbook title.",
-    "width": 186,
-    "height": 415
+    "src": "projects/eduswap/framed-search.webp",
+    "title": "Search",
+    "description": "The implemented search filters textbook listings by title.",
+    "alt": "EduSwap: Search. The implemented search filters textbook listings by title.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/book-details.webp",
+    "src": "projects/eduswap/framed-book-details.webp",
     "title": "Book details",
-    "description": "Inspect price, condition, seller, university and available book images.",
-    "alt": "EduSwap: Book details. Inspect price, condition, seller, university and available book images.",
-    "width": 186,
-    "height": 415
+    "description": "View the book’s price, condition, author and seller details.",
+    "alt": "EduSwap: Book details. View the book’s price, condition, author and seller details.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/sell.webp",
-    "title": "Sell textbook",
-    "description": "Enter listing details and select a book image from the device.",
-    "alt": "EduSwap: Sell textbook. Enter listing details and select a book image from the device.",
-    "width": 186,
-    "height": 415
+    "src": "projects/eduswap/framed-sell.webp",
+    "title": "Sell a textbook",
+    "description": "Create a textbook listing with relevant details and device-selected images.",
+    "alt": "EduSwap: Sell a textbook. Create a textbook listing with relevant details and device-selected images.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/chat-list.webp",
-    "title": "Chat list",
-    "description": "The inquiry entry point groups the prototype’s textbook conversations.",
-    "alt": "EduSwap: Chat list. The inquiry entry point groups the prototype’s textbook conversations.",
-    "width": 135,
-    "height": 301
+    "src": "projects/eduswap/framed-inquiry.webp",
+    "title": "Inquiry / chat",
+    "description": "Send a simple textbook inquiry, with blank-message validation and self-message prevention.",
+    "alt": "EduSwap: Inquiry / chat. Send a simple textbook inquiry, with blank-message validation and self-message prevention.",
+    "width": 720,
+    "height": 1523
   },
   {
-    "src": "projects/eduswap/inquiry.webp",
-    "title": "Buyer/seller inquiry",
-    "description": "Simple local messages support textbook questions, with validation and self-message prevention.",
-    "alt": "EduSwap: Buyer/seller inquiry. Simple local messages support textbook questions, with validation and self-message prevention.",
-    "width": 135,
-    "height": 301
-  },
-  {
-    "src": "projects/eduswap/profile.webp",
+    "src": "projects/eduswap/framed-profile.webp",
     "title": "Student profile",
-    "description": "View profile information and manage your own listings, including deletion.",
-    "alt": "EduSwap: Student profile. View profile information and manage your own listings, including deletion.",
-    "width": 135,
-    "height": 301
-  },
-  {
-    "src": "projects/eduswap/feedback.webp",
-    "title": "User feedback",
-    "description": "Toast messages give immediate feedback after actions, such as logging out.",
-    "alt": "EduSwap: User feedback. Toast messages give immediate feedback after actions, such as logging out.",
-    "width": 135,
-    "height": 301
+    "description": "View profile details and manage your own listings.",
+    "alt": "EduSwap: Student profile. View profile details and manage your own listings.",
+    "width": 720,
+    "height": 1523
   }
 ]
 

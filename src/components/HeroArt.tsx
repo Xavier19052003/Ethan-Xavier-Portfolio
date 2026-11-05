@@ -12,8 +12,8 @@ export function HeroArt() {
         {Array.from({ length: 28 }, (_, index) => <ellipse key={index} rx={160 + Math.sin(index / 27 * Math.PI) * 32} ry={64 + index * 3.4} transform={`rotate(${index * 2.6 - 36})`} stroke="url(#orbit-gradient)" strokeWidth="2.4" opacity={.75 + index / 110} />)}
       </g></g>
       <circle className="hero-sphere" cx="250" cy="250" r="48" fill="url(#sphere-gradient)"/>
-      <circle cx="412" cy="154" r="7" fill="#e7c6ff"/>
-      <path d="M94 342v28m-14-14h28" stroke="#fae588" strokeWidth="2"/>
+      <circle className="orbit-dot" cx="412" cy="154" r="7" fill="#e7c6ff"/>
+      <path className="orbit-spark" d="M94 342v28m-14-14h28" stroke="#fae588" strokeWidth="2"/>
     </svg>
     <div className="art-note"><span className="art-bracket">&#123;</span><span>A little curiosity.<br/>A lot of possibility.</span><span className="art-bracket">&#125;</span></div>
     <div className="art-bottomline"><span>CREATIVE BY NATURE.</span><span>BUILT WITH INTENTION.</span></div>

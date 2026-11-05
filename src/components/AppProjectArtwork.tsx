@@ -5,6 +5,9 @@ export function AppProjectArtwork({ project }: { project: Project }) {
   const primary = project.gallery.find(screen => screen.src === project.image)
   const supporting = project.id === 'eduswap' ? [project.gallery[0], project.gallery[4]] : [project.gallery[2], project.gallery[4]]
   const screens = [supporting[0], primary, supporting[1]].filter(screen => screen?.src)
+  if (project.id === 'eduswap' && primary) return <div className={`project-artwork app-project-artwork artwork-${project.theme}`}>
+    <div className="app-cover-screens"><div className="app-cover-phone app-cover-phone-1 includes-device"><img src={assetUrl(primary.src)} alt={project.imageAlt} width={primary.width} height={primary.height} loading="lazy" decoding="async"/></div></div>
+  </div>
   return <div className={`project-artwork app-project-artwork artwork-${project.theme}`}>
     <div className="app-cover-screens">
       {screens.map((screen, index) => <div className={`app-cover-phone app-cover-phone-${index} ${project.screensIncludeDeviceFrame ? 'includes-device' : ''}`} key={screen!.src}>

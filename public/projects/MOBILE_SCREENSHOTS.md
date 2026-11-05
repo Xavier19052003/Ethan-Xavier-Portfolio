@@ -1,12 +1,11 @@
-# Authentic Android screenshots
+# Android screenshot presentation
 
-Imported on 4 November 2026 without modifying originals.
+EduSwap now uses eight new, authentic preframed screenshots from the redirected Windows Desktop, imported on 5 November 2026. The active order is Registration, Input validation, Marketplace, Search, Book details, Sell a textbook, Inquiry / chat and Student profile. All active image paths begin projects/eduswap/framed-. Old web copies are retained as inactive assets; none appears in the active gallery or card.
 
-- EduSwap: all ten requested PNGs from the Windows Pictures folder, in the requested sequence. WebP copies are lossless and retain original dimensions.
-- Kitabu: nine numbered Desktop PNGs, catalogue through empty reservations. These already include a device frame, so the viewer does not add another frame or cover them with a decorative speaker. Pickup confirmation is demonstrated by the transition from pending to active; there is no separately supplied pickup screen.
+The Desktop originals are 1466×3101 PNGs. Optimised WebP copies are 720px wide, preserve the entire phone border and interface, and total about 965 KB. The new Marketplace screen is the centred card image. Existing phone borders are not duplicated by the portfolio.
 
-The screenshots were visually reviewed for project identity and personal information. EduSwap uses demonstration account details; the provided feedback capture already has soft/blurred input values. Original screenshots are not uploaded to another service. Some EduSwap originals are only 135–186 pixels wide: the copies preserve these pixels faithfully rather than inventing higher-resolution interfaces. Replacement device exports at native resolution would improve readability.
+Kitabu’s nine image assets and project information are unchanged. Its screenshots already contain device framing.
 
-Kitabu web copies are resized proportionally to 720px wide and encoded as lossless WebP; originals are 1466px wide.
+The shared viewer keeps a fixed portrait frame, uses contain-fit images, decodes a requested image before a 120ms outgoing fade and 220ms entrance, and preloads only the next likely screen. Arrows, keyboard controls, numbered selectors and horizontal swipes remain available. Reduced motion uses immediate image changes.
 
-ProjectScreen data in src/data/appScreens.ts supplies image paths, web-image width/height, titles, descriptions and alt text. MobileAppShowcase is shared by both apps, with previous/next controls, keyboard navigation, horizontal swipes, loading/error states and full-size image links. Reduced-motion preferences disable transitions. No APK or store link is claimed.
+Original files are untouched. Current web dimensions and paths are recorded in app-captures.json. See MOBILE_MOTION_EDUSWAP_UPDATE.md at the project root for motion architecture, responsive results and testing limits.

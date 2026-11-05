@@ -61,7 +61,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .brand { display: flex; gap: 12px; align-items: center; flex-shrink: 0; font-family: var(--heading); font-size: 16px; line-height: 1; font-weight: 700; letter-spacing: 1.5px; }
 .brand-symbol { font-size: 53px; line-height: .8; font-weight: 600; letter-spacing: -12px; padding-right: 14px; transform: translateY(-4px); }
 .brand-symbol span { color: #9d68bb; font-size: 45px; }
-.brand-sub { display: block; font-size: 12px; letter-spacing: 4.6px; margin-top: 6px; }
+.brand-sub { display: block; font-size: 10px; letter-spacing: 1px; margin-top: 6px; white-space: nowrap; }
 .main-nav { display: flex; align-items: center; gap: clamp(18px, 2vw, 32px); }
 .main-nav > a { position: relative; font-size: 14px; padding-block: 14px; }
 .main-nav > a::after { content: ''; position: absolute; left: 0; bottom: 5px; height: 2px; width: 100%; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
@@ -513,6 +513,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .brand-logo img { width: 100%; height: auto; object-fit: contain; }
 .footer-brand > .brand-logo-footer { width: 94px; padding: 9px; border-radius: 5px; background: var(--paper); }
 .footer-brand > .footer-wordmark { font-size: inherit; color: inherit; }
+.footer-wordmark small { font-size: .55em; letter-spacing: .08em; }
 .portrait-block .portrait { height: auto; aspect-ratio: 4 / 5; max-height: none; object-fit: cover; object-position: 50% 28%; border: 1px solid #dcdcd6; box-shadow: 10px 10px 0 #ece5f0; }
 .portrait-caption { padding-top: 25px; }
 @media (max-width: 760px) {

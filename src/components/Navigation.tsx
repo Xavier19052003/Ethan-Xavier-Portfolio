@@ -50,7 +50,7 @@ export function Navigation() {
 
   return <header className="site-header" ref={header}>
     <div className="nav-wrap">
-      <a className="brand" href="#home" aria-label="Xavier Designs, home" onClick={() => setOpen(false)}><BrandLogo/><span>XAVIER<span className="brand-sub">DESIGNS</span></span></a>
+      <a className="brand" href="#home" aria-label="Ethan Xavier, Web and App Developer, home" onClick={() => setOpen(false)}><BrandLogo/><span>ETHAN XAVIER<span className="brand-sub">WEB &amp; APP DEVELOPER</span></span></a>
       <ThemeToggle/>
       <button ref={toggle} className="menu-toggle" type="button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
       <nav id="main-nav" className={`main-nav ${open ? 'is-open' : ''}`} aria-label="Main navigation">

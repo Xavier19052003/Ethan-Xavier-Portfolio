@@ -1,0 +1,16 @@
+.project-dialog::backdrop { background: rgb(18 18 24 / calc(.72 * var(--dialog-backdrop-opacity, 1))); backdrop-filter: blur(calc(6px * var(--dialog-backdrop-opacity, 1))); }
+.project-cover-button { transition: filter .18s ease, transform .3s; }
+.project-cover-button:active { filter: brightness(.94); }
+.phone-frame .phone-screen { position: absolute; inset: 0; animation: none; }
+.screen-loading { z-index: 1; pointer-events: none; align-items: end; padding-bottom: 12px; text-shadow: 0 1px 4px #17171c; }
+.current-screen-copy { min-height: 175px; }
+.phone-perspective { perspective: 900px; touch-action: pan-y pinch-zoom; }
+.phone-tilt { transform-style: preserve-3d; transform-origin: center; }
+.phone-rotation-controls { display: flex; align-items: center; justify-content: center; gap: 10px; border: 0; padding: 12px 0 0; margin: 0; }
+.phone-rotation-controls legend { text-align: center; font-size: 13px; color: var(--muted); }
+.phone-rotation-controls .text-link, .phone-touch-mode { min-height: 44px; }
+.phone-touch-mode { display: block; margin: 4px auto 0; }
+.phone-gesture-hint { max-width: 280px; margin: 4px auto 0; color: var(--muted); font-size: 13px; line-height: 1.5; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  .project-dialog, .project-dialog .project-artwork, .project-dialog .dialog-content > *, .phone-screen { opacity: 1 !important; transform: none !important; }
+}

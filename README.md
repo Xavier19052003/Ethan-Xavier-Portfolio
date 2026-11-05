@@ -1,4 +1,4 @@
-# Xavier Designs
+# Ethan Xavier — Web and App Developer
 
 The interactive upgrade adds coordinated hero motion, scroll progress, floating back-to-top, animated filtering, hash-linked case studies, copy email and persistent light/dark themes. See `INTERACTIVE_UPGRADE.md` for implementation details and verification. The contact section now uses prominent email, phone and GitHub details, with Let’s Talk and Copy Email actions. The form and provider setup have been removed. See `REFINEMENTS.md` for the latest changes and mobile screenshot requirements.
 

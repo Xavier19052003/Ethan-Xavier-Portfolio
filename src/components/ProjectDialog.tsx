@@ -1,31 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { ArrowUpRight, Check, Image, X } from 'lucide-react'
 import type { Project } from '../data/projects'
 import { ProjectArtwork } from './ProjectArtwork'
 import { assetUrl } from '../utils/assets'
 import { caseStudies } from '../data/caseStudies'
 import { MobileAppShowcase } from './MobileAppShowcase'
+import { useProjectDialogMotion } from '../hooks/useProjectDialogMotion'
 
-export function ProjectDialog({ project, onClose }: { project: Project | null; onClose: () => void }) {
+export function ProjectDialog({ project: requestedProject, onClose }: { project: Project | null; onClose: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null)
-  useEffect(() => {
-    if (!project) return
-    const element = dialog.current
-    const opener = document.activeElement as HTMLElement | null
-    element?.showModal()
-    const overflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    return () => {
-      element?.close()
-      document.body.style.overflow = overflow
-      opener?.focus({ preventScroll: true })
-    }
-  }, [project])
+  const [project, setProject] = useState(requestedProject)
+  if (requestedProject && requestedProject !== project) setProject(requestedProject)
+  const exited = useCallback(() => setProject(null), [])
+  useProjectDialogMotion(dialog, Boolean(requestedProject), project?.id, exited)
+  const close = () => { if (requestedProject) onClose() }
 
   const study = project ? caseStudies[project.id] : null
-  return <dialog ref={dialog} className="project-dialog" aria-labelledby="project-dialog-title" onCancel={event => { event.preventDefault(); onClose() }} onClick={event => { if (event.target === event.currentTarget) onClose() }}>
+  return <dialog ref={dialog} className="project-dialog" aria-labelledby="project-dialog-title" data-transition={requestedProject ? 'opening' : 'closing'} onCancel={event => { event.preventDefault(); close() }} onClick={event => { if (event.target === event.currentTarget) close() }}>
     {project && <div className="dialog-inner">
-      <button type="button" className="dialog-close icon-button" aria-label="Close case study" onClick={onClose}><X/></button>
+      <button type="button" className="dialog-close icon-button" aria-label="Close case study" disabled={!requestedProject} onClick={close}><X/></button>
       <ProjectArtwork project={project}/>
       <div className="dialog-content">
         <p className="eyebrow">{project.category}</p><h2 id="project-dialog-title">{project.title}</h2>
@@ -38,7 +31,7 @@ export function ProjectDialog({ project, onClose }: { project: Project | null; o
         {project.technologies.length > 0 && <><h3>Technologies</h3><ul className="tags">{project.technologies.map(tech => <li key={tech}>{tech}</li>)}</ul></>}
         {!project.filters.includes('Application Development') && project.gallery.length > 0 && <><h3>Project gallery</h3><p className="gallery-instruction">Open any screenshot for a full-size view.</p><div className="gallery website-gallery">{project.gallery.map((item, index) => item.src ? <figure key={item.src}><a href={assetUrl(item.src)} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.alt} at full size (opens in a new tab)`}><img src={assetUrl(item.src)} alt={item.alt} loading="lazy" decoding="async" width="1440" height="900"/></a><figcaption>{item.alt}</figcaption></figure> : <div className="gallery-placeholder" key={index}><Image size={24} aria-hidden="true"/><p>{item.alt}</p></div>)}</div></>}
         <div className="dialog-actions">
-          <button className="button button-outline" type="button" onClick={onClose}>Back to projects</button>
+          <button className="button button-outline" type="button" disabled={!requestedProject} onClick={close}>Back to projects</button>
           {project.liveUrl && project.liveLinkEnabled && <a className="button button-dark" href={project.liveUrl} target="_blank" rel="noopener noreferrer">View live website <ArrowUpRight size={17}/><span className="sr-only"> (opens in a new tab)</span></a>}
           {project.githubUrl && <a className="button button-outline" href={project.githubUrl} target="_blank" rel="noopener noreferrer">View repository <ArrowUpRight size={17}/><span className="sr-only"> (opens in a new tab)</span></a>}
         </div>

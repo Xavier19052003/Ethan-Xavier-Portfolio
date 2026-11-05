@@ -54,17 +54,20 @@ export function useAnimations(scope: RefObject<HTMLDivElement | null>) {
 
         // Independent SVG layers keep decorative movement away from labels.
         const ambient = [
-          gsap.to('.orbit-art', { y: -6, duration: 4.8, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
-          gsap.to('.orbit-motion', { rotation: 12, svgOrigin: '250 250', duration: 24, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
-          gsap.to('.hero-sphere', { y: -4, x: 2, scale: 1.025, svgOrigin: '250 250', duration: 5.4, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
+          gsap.to('.orbit-art', { y: -12, duration: 3.8, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
+          gsap.to('.orbit-motion', { rotation: 45, svgOrigin: '250 250', duration: 12, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
+          gsap.to('.hero-sphere', { y: -10, x: 7, scale: 1.07, svgOrigin: '250 250', duration: 4.2, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
+          gsap.to('.orbit-dot', { rotation: 360, svgOrigin: '250 250', duration: 18, ease: 'none', repeat: -1, paused: true }),
+          gsap.to('.orbit-spark', { rotation: 45, scale: 1.25, svgOrigin: '94 356', duration: 2.8, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
         ]
         let inView = false
-        const playback = () => ambient.forEach(tween => { if (inView && !document.hidden) tween.resume(); else tween.pause() })
+        const playback = () => ambient.forEach(tween => { if (inView && !document.hidden && !document.body.dataset.expOpen && !document.body.dataset.projectOpen) tween.resume(); else tween.pause() })
         const observer = new IntersectionObserver(entries => { inView = entries[0]?.isIntersecting || false; playback() })
         const artwork = scope.current?.querySelector('.hero-art')
         if (artwork) observer.observe(artwork)
         document.addEventListener('visibilitychange', playback)
-        cleanups.push(() => { observer.disconnect(); document.removeEventListener('visibilitychange', playback) })
+        window.addEventListener('portfolio:dialog-presence', playback)
+        cleanups.push(() => { observer.disconnect(); document.removeEventListener('visibilitychange', playback); window.removeEventListener('portfolio:dialog-presence', playback) })
         if (conditions.desktop) {
           gsap.to('.art-sticker', {
             y: -22, rotation: 2, ease: 'none',

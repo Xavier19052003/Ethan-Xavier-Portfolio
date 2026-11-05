@@ -13,7 +13,7 @@ export function About() {
         <div className="portrait-caption"><span>{profile.name}</span><ArrowUpRight size={20}/></div>
       </div>
       <div className="about-copy" data-reveal>
-        <h3>I like making things that<br/><span>look good. And work better.</span></h3>
+        <div className="about-story-heading"><h3>I like making things that<br/><span>look good. And work better.</span></h3></div>
         <p>I’m Ethan Xavier Peters, a final-year Bachelor of Information Technology student at STADIO Higher Education, specialising in Web and App Development, with expected completion in 2026.</p>
         <p>I enjoy the space where creativity meets logic. Through commercial e-commerce work, freelance client websites and Android applications, I bring responsive development, thoughtful UI/UX and practical testing together.</p>
         <p>Winning the STADIO Hackathon in 2024, 2025 and 2026 has been a proud part of that journey. I value collaboration, visual communication and attention to detail, and I’m seeking graduate or junior opportunities where I can contribute, learn and keep growing.</p>

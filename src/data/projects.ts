@@ -69,7 +69,7 @@ export const projects: Project[] = [
     id: 'eduswap', title: 'EduSwap', category: 'Native Android application · University project',
     description: 'A student-to-student textbook marketplace for discovering, buying and selling second-hand academic books, built as a lightweight Android MVP.',
     technologies: ['Kotlin', 'Android Studio', 'XML layouts', 'ViewBinding', 'RecyclerView', 'Activities & Intents', 'In-memory collections'],
-    image: 'projects/eduswap/marketplace.webp', imageAlt: 'EduSwap’s genuine textbook marketplace screen', gallery: eduswapScreens,
+    image: 'projects/eduswap/framed-marketplace.webp', imageAlt: 'EduSwap’s genuine textbook marketplace screen', gallery: eduswapScreens, screensIncludeDeviceFrame: true,
     liveUrl: '', liveLinkEnabled: false, githubUrl: 'https://github.com/Xavier19052003/EduSwap-MADA372-App', featured: false, status: 'academic', verified: true, theme: 'edu',
     filters: ['Application Development', 'Academic'],
     highlights: ['UI-only registration with required-field validation', 'Marketplace browsing, title search and book details', 'Create listings with device-selected images', 'Simple inquiries with blank-message and self-message checks', 'Profile details, own-listing deletion and Toast feedback'],

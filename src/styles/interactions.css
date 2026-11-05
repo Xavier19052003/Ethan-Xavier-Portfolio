@@ -90,9 +90,9 @@ html[data-theme="dark"] { color-scheme: dark; color: #faf9f6; background: #19191
   .nav-wrap { gap: 10px; }
   .theme-toggle { width: 40px; height: 40px; }
   .menu-toggle { padding: 8px; }
-  .brand { font-size: 14px; gap: 8px; }
+  .brand { font-size: 12px; gap: 8px; letter-spacing: .7px; }
   .brand-logo { width: 52px; }
-  .brand-sub { font-size: 10px; letter-spacing: 2px; }
+  .brand-sub { font-size: 8px; letter-spacing: .35px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .project-cover-button, .project-cover-button .cover-composition, .project-cover-button img,
